@@ -27,7 +27,8 @@ def choose_initial_player():
         print("Computer starts")
     else:
         print("Player starts")
-    return initial
+
+    return bool(initial)
 
 def player_turn(board, token):
 
@@ -43,6 +44,7 @@ def player_turn(board, token):
             return board
 
 def computer_turn(board, token):
+
     voidPositions = []
     for i in range(len(board)):
         if board[i] == "":
@@ -76,8 +78,8 @@ def check_winner(board):
                 
 
     return False
-                    
-            
+
+
 isPlayerTurn = choose_initial_player()
 draw_board(board)
 
